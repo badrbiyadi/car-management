@@ -9,14 +9,14 @@ class CarController extends Controller
 {
     public function index()
     {
-        return view('cars', [
+        return view('cars.index', [
             'cars' => auth()->user()->cars, // Logged user cars
         ]);
     }
 
     public function create()
     {
-        return view('create-car');
+        return view('cars.create');
     }
 
     public function store(Request $request)
@@ -41,7 +41,7 @@ class CarController extends Controller
     {
         $car = Car::find($id);
 
-        return view('edit-car', [
+        return view('cars.edit', [
             'car' => $car,
         ]);
     }

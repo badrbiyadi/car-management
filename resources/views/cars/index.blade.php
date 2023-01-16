@@ -14,6 +14,11 @@
                             {{ session('message') }}
                         </div>
                     @endif
+
+                    <div class="text-right py-3">
+                        <a class=" bg-green-600 hover:bg-green-700 text-white rounded p-1 text-sm" href="/cars/create">Create new car</a>
+                    </div>
+
                     @if (count($cars))
                         <table class="w-full border-collapse	 border border-slate-500">
                             <thead>
